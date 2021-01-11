@@ -29,12 +29,15 @@ COPY paper-configs/* ./
 # Copy in plugin configs
 COPY plugin-configs/**/* plugins/
 
+# Copy in startup script
+COPY run.sh ./
+RUN chmod +x run.sh
+
 # Link world data
 VOLUME ["/odyssey/worlds"]
 
 # Open ports
 EXPOSE 80 433 25565
 
-# Set startup script
-COPY run.sh ./
-ENTRYPOINT ["./run.sh"]
+# Initial command
+CMD ["./run.sh"]
