@@ -1,30 +1,33 @@
-# Configuration
-ARG JAVA_VERSION=11
-ARG PAPER_VERSION=1.16.4
-
 # Base image
-FROM openjdk:${JAVA_VERSION}
+FROM openjdk:11
 
 # Set working directory
 WORKDIR /odyssey
 
-# Pull down Paper
-ADD https://papermc.io/api/v1/paper/${PAPER_VERSION}/latest/download paper.jar
+##### DOWNLOADS #####
+
+# Paper
+ARG PAPER_VERSION=1.16.4
+RUN wget https://papermc.io/api/v1/paper/${PAPER_VERSION}/latest/download -O paper.jar
+
+# Make plugins folder
+RUN mkdir plugins
+
+# Multiverse Core
+ARG MV_CORE_URL=https://media.forgecdn.net/files/3074/594/Multiverse-Core-4.2.2.jar
+RUN wget ${MV_CORE_URL} -O plugins/Multiverse-Core
+
+# Multiverse Portals
+# Multiverse NetherPortals
+# Multiverse Inventories
+# World Edit
+# Dynmap
 
 # Copy in paper configs
-COPY paper-configs/* .
-
-# Pull down each plugin
-ADD https://dev.bukkit.org/projects/multiverse-core/files/latest plugins/Multiverse-Core
-ADD https://dev.bukkit.org/projects/multiverse-portals/files/latest plugins/Multiverse-Portals
-#ADD https://dev.bukkit.org/projects/multiverse-netherportals/files/latest plugins/Multiverse-NetherPortals
-#ADD https://dev.bukkit.org/projects/multiverse-inventories/files/latest plugins/Multiverse-Inventories
-
-#ADD world edit
-#ADD Dynmap
+COPY paper-configs/* ./
 
 # Copy in plugin configs
-COPY plugin-configs/**/* plugins
+COPY plugin-configs/**/* plugins/
 
 # Link world data
 VOLUME ["/odyssey/worlds"]
@@ -33,5 +36,5 @@ VOLUME ["/odyssey/worlds"]
 EXPOSE 80 433 25565
 
 # Set startup script
-COPY run.sh .
+COPY run.sh ./
 ENTRYPOINT ["./run.sh"]
