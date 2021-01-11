@@ -8,6 +8,7 @@ services:
       - "25565:25565"
     volumes:
       - "/odyssey/data/prod/worlds:/odyssey/worlds"
+      - "/odyssey/data/prod/whitelist.json:/odyssey/whitelist.json"
 
   dev:
     build: .
@@ -16,3 +17,4 @@ services:
       - "25566:25565"
     volumes:
       - "/odyssey/data/dev/worlds:/odyssey/worlds"
+      - "/odyssey/data/prod/whitelist.json:/odyssey/whitelist.json"
