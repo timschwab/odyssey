@@ -12,7 +12,7 @@ WORKDIR /odyssey
 ADD https://papermc.io/api/v1/paper/${PAPER_VERSION}/latest/download paper.jar
 
 # Copy in paper configs
-ADD paper-configs/* .
+COPY paper-configs/* .
 
 # Pull down each plugin
 ADD https://dev.bukkit.org/projects/multiverse-core/files/latest plugins/Multiverse-Core
@@ -20,8 +20,12 @@ ADD https://dev.bukkit.org/projects/multiverse-portals/files/latest plugins/Mult
 ADD https://dev.bukkit.org/projects/multiverse-netherportals/files/latest plugins/Multiverse-NetherPortals
 #ADD https://dev.bukkit.org/projects/multiverse-inventories/files/latest plugins/Multiverse-Inventories
 
+#ADD world edit
+#ADD Vanilla Tweaks
+#ADD Dynmap
+
 # Copy in plugin configs
-ADD plugin-configs/**/* plugins
+COPY plugin-configs/**/* plugins
 
 # Link world data
 
@@ -29,5 +33,5 @@ ADD plugin-configs/**/* plugins
 EXPOSE 25565
 
 # Set startup script
-ADD run.sh .
+COPY run.sh .
 ENTRYPOINT ["./run.sh"]
