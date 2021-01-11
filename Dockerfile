@@ -13,13 +13,22 @@ RUN wget https://papermc.io/api/v1/paper/${PAPER_VERSION}/latest/download -O pap
 # Make plugins folder
 RUN mkdir plugins
 
-# Multiverse Core
+# Multiverse Core 4.2.2
 ARG MV_CORE_URL=https://media.forgecdn.net/files/3074/594/Multiverse-Core-4.2.2.jar
-RUN wget ${MV_CORE_URL} -O plugins/Multiverse-Core
+RUN wget ${MV_CORE_URL} -O plugins/Multiverse-Core.jar
 
-# Multiverse Portals
-# Multiverse NetherPortals
-# Multiverse Inventories
+# Multiverse Portals 4.2.1
+ARG MV_PORTALS_URL=https://media.forgecdn.net/files/3113/114/Multiverse-Portals-4.2.1.jar
+RUN wget ${MV_PORTALS_URL} -O plugins/Multiverse-Portals.jar
+
+# Multiverse NetherPortals 4.2.1
+ARG MV_NETHER_PORTALS_URL=https://media.forgecdn.net/files/3074/616/Multiverse-NetherPortals-4.2.1.jar
+RUN wget ${MV_NETHER_PORTALS_URL} -O plugins/Multiverse-NetherPortals.jar
+
+# Multiverse Inventories 4.2.1
+ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3074/607/Multiverse-Inventories-4.2.1.jar
+RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
+
 # World Edit
 # Dynmap
 
