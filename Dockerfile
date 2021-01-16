@@ -7,7 +7,7 @@ WORKDIR /odyssey
 ##### DOWNLOADS #####
 
 # Paper
-ARG PAPER_VERSION=1.16.4
+ARG PAPER_VERSION=1.16.5
 RUN wget https://papermc.io/api/v1/paper/${PAPER_VERSION}/latest/download -O paper.jar
 
 # Make plugins folder

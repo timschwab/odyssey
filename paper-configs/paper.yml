@@ -234,3 +234,8 @@ world-settings:
     fishing-time-range:
       MinimumTicks: 100
       MaximumTicks: 600
+    entity-per-chunk-save-limit:
+      experience_orb: -1
+      snowball: -1
+      ender_pearl: -1
+      arrow: -1
