@@ -28,7 +28,7 @@ portals:
     owner: pyzaist
     location: 56.0,56.0,28.0:56.0,56.0,28.0
     world: nexus
-    destination: p:asgard>nexus
+    destination: p:asgard>nexus:n
   asgard>nexus:
     entryfee:
       amount: 0.0
@@ -38,4 +38,4 @@ portals:
     owner: pyzaist
     location: 8.0,65.0,16.0:8.0,65.0,16.0
     world: asgard
-    destination: p:nexus>asgard
+    destination: p:nexus>asgard:n
