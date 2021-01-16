@@ -78,6 +78,7 @@ messages:
     flying-vehicle: Flying is not enabled on this server
 world-settings:
   default:
+    portal-search-vanilla-dimension-scaling: true
     water-over-lava-flow-speed: 5
     use-faster-eigencraft-redstone: false
     zombies-target-turtle-eggs: true

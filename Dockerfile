@@ -41,7 +41,7 @@ RUN ln -s configs/server.properties server.properties && \
 	ln -s configs/permissions.yml permissions.yml && \
 	ln -s configs/bukkit.yml bukkit.yml && \
 	ln -s configs/spigot.hml spigot.hml && \
-	ln -s configs/paper.yml paper.yml &&
+	ln -s configs/paper.yml paper.yml
 
 # Copy in startup script
 COPY run.sh ./
