@@ -1,1 +1,6 @@
+# Annoying Mac file
 .DS_Store
+
+# Keep the worlds folder, but ignore the contents
+worlds/*
+!worlds/.gitkeep
