@@ -1,1 +1,8 @@
-[]
+[
+	{
+		"uuid": "38d57a0f-5baa-4f73-950e-778722fde44a",
+		"name": "pyzaist",
+		"level": 4,
+		"bypassesPlayerLimit": true
+	}
+]
