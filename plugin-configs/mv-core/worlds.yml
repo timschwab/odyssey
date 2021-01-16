@@ -5,7 +5,7 @@ worlds:
     alias: nexus
     color: WHITE
     style: NORMAL
-    pvp: 'true'
+    pvp: 'false'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -29,7 +29,7 @@ worlds:
     autoHeal: 'true'
     adjustSpawn: 'true'
     portalForm: ALL
-    gameMode: SURVIVAL
+    gameMode: ADVENTURE
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
@@ -95,7 +95,7 @@ worlds:
     allowFlight: 'true'
   nexus_the_end:
     ==: MVWorld
-    hidden: 'false'
+    hidden: 'true'
     alias: nexus_the_end
     color: WHITE
     style: NORMAL
@@ -170,7 +170,7 @@ worlds:
     autoHeal: 'true'
     adjustSpawn: 'true'
     portalForm: ALL
-    gameMode: SURVIVAL
+    gameMode: CREATIVE
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
@@ -236,7 +236,7 @@ worlds:
     allowFlight: 'true'
   nexus_nether:
     ==: MVWorld
-    hidden: 'false'
+    hidden: 'true'
     alias: nexus_nether
     color: WHITE
     style: NORMAL
