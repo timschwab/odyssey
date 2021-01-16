@@ -7,8 +7,10 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - "/odyssey/data/prod/worlds:/odyssey/worlds"
-      - "/odyssey/data/prod/whitelist.json:/odyssey/whitelist.json"
+      - "/odyssey/prod/worlds:/odyssey/worlds"
+      - "/odyssey/prod/paper-configs:/odyssey/configs"
+      - "/odyssey/prod/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
+      - "/odyssey/prod/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"
 
   dev:
     build: .
@@ -16,5 +18,7 @@ services:
     ports:
       - "25566:25565"
     volumes:
-      - "/odyssey/data/dev/worlds:/odyssey/worlds"
-      - "/odyssey/data/prod/whitelist.json:/odyssey/whitelist.json"
+      - "/odyssey/dev/worlds:/odyssey/worlds"
+      - "/odyssey/dev/paper-configs:/odyssey/configs"
+      - "/odyssey/dev/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
+      - "/odyssey/dev/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"

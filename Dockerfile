@@ -32,18 +32,20 @@ RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 # World Edit
 # Dynmap
 
-# Copy in paper configs
-COPY paper-configs/* ./
-
-# Copy in plugin configs
-COPY plugin-configs/**/* plugins/
+# Set up symlinks for the paper config files. Lame but necessary.
+RUN ln -s configs/server.properties server.properties && \
+	ln -s configs/ops.json ops.json && \
+	ln -s configs/whitelist.json whitelist.json && \
+	ln -s configs/banned-players.json banned-players.json && \
+	ln -s configs/banned-ips.json banned-ips.json && \
+	ln -s configs/permissions.yml permissions.yml && \
+	ln -s configs/bukkit.yml bukkit.yml && \
+	ln -s configs/spigot.hml spigot.hml && \
+	ln -s configs/paper.yml paper.yml &&
 
 # Copy in startup script
 COPY run.sh ./
 RUN chmod +x run.sh
-
-# Link world data
-VOLUME ["/odyssey/worlds"]
 
 # Open ports
 EXPOSE 80 433 25565
