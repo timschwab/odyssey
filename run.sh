@@ -1,2 +1,2 @@
 #!/bin/bash
-exec java -Xms6G -Xmx6G -jar -Dcom.mojang.eula.agree=true paper.jar
+exec java -Xms$JAVA_MEMORY -Xmx$JAVA_MEMORY -jar -Dcom.mojang.eula.agree=true paper.jar
