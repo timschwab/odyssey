@@ -19,3 +19,23 @@ portals:
     location: 17.0,57.0,1.0:17.0,57.0,1.0
     world: sandbox
     destination: p:nexus>sandbox
+  nexus>asgard:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: 56.0,56.0,28.0:56.0,56.0,28.0
+    world: nexus
+    destination: p:asgard>nexus
+  asgard>nexus:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: 8.0,65.0,16.0:8.0,65.0,16.0
+    world: asgard
+    destination: p:nexus>asgard
