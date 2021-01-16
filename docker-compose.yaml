@@ -5,7 +5,7 @@ services:
     build: .
     container_name: odyssey-prod
     environment:
-      - JAVA_MEMORY=8G
+      - JAVA_MEMORY=6G
     ports:
       - "25565:25565"
     volumes:
