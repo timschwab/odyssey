@@ -39,3 +39,23 @@ portals:
     location: 8.0,65.0,16.0:8.0,65.0,16.0
     world: asgard
     destination: p:nexus>asgard:n
+  nexus>coruscant:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: 8.0,56.0,-12.0:8.0,56.0,-12.0
+    world: nexus
+    destination: p:coruscant>nexus:e
+  coruscant>nexus:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: -267.0,72.0,-133.0:-267.0,72.0,-133.0
+    world: coruscant
+    destination: p:nexus>coruscant
