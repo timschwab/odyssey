@@ -14,7 +14,7 @@ services:
       - "/odyssey/prod/paper-configs:/odyssey/configs"
       - "/odyssey/prod/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
       - "/odyssey/prod/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"
-      - "/odyssey/dev/plugin-configs/mv-inventories:/odyssey/plugins/Multiverse-Inventories"
+      - "/odyssey/prod/plugin-configs/mv-inventories:/odyssey/plugins/Multiverse-Inventories"
     deploy:
       resources:
         limits:
