@@ -1,0 +1,2 @@
+# Docker was doing something with the world data that caused the build to delay massively before even beginning
+worlds/*
