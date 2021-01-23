@@ -1,0 +1,29 @@
+# Multiverse-Inventories Groups
+
+# To ADD, DELETE, and EDIT groups use the command /mvinv group.
+# No support will be given for those who manually edit these groups.
+groups:
+  survival:
+    worlds:
+    - coruscant
+    - coruscant_nether
+    - coruscant_the_end
+    shares:
+    - all
+  nexus:
+    worlds:
+    - nexus
+    - nexus_the_end
+    - nexus_nether
+    shares:
+    - all
+  sandbox:
+    worlds:
+    - sandbox
+    shares:
+    - all
+  asgard:
+    worlds:
+    - asgard
+    shares:
+    - all

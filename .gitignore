@@ -4,3 +4,8 @@
 # Keep the worlds folder, but ignore the contents
 worlds/*
 !worlds/.gitkeep
+
+# Keep the inventories config, but ignore the data. Sadly you can't move the data somewhere else, AFAIK.
+plugin-configs/mv-inventories/*
+!plugin-configs/mv-inventories/config.yml
+!plugin-configs/mv-inventories/groups.yml
