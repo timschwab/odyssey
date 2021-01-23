@@ -1,2 +1,2 @@
 #!/bin/bash
-exec java -Xms$JAVA_MEMORY -Xmx$JAVA_MEMORY -jar -Dcom.mojang.eula.agree=true paper.jar
+exec java -Xms$JAVA_MEMORY_MIN -Xmx$JAVA_MEMORY_MAX -jar -Dcom.mojang.eula.agree=true paper.jar
