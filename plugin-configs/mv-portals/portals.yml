@@ -56,6 +56,6 @@ portals:
     teleportnonplayers: false
     handlerscript: ''
     owner: pyzaist
-    location: -267.0,72.0,-133.0:-267.0,72.0,-133.0
+    location: -265.0,72.0,-131.0:-265.0,72.0,-131.0
     world: coruscant
     destination: p:nexus>coruscant

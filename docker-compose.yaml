@@ -5,8 +5,8 @@ services:
     build: .
     container_name: odyssey-prod
     environment:
-      - JAVA_MEMORY_MIN=2G
       - JAVA_MEMORY_MAX=6G
+      - JAVA_MEMORY_MIN=3G
     ports:
       - "25565:25565"
     volumes:
@@ -20,15 +20,14 @@ services:
           cpus: 2
           memory: 6G
         reservations:
-          cpus: 0.5
-          memory: 2G
+          memory: 3G
 
   dev:
     build: .
     container_name: odyssey-dev
     environment:
-      - JAVA_MEMORY_MIN=1G
       - JAVA_MEMORY_MAX=2G
+      - JAVA_MEMORY_MIN=2G
     ports:
       - "25566:25565"
     volumes:
@@ -42,5 +41,4 @@ services:
           cpus: 1
           memory: 2G
         reservations:
-          cpus: 0.25
-          memory: 1G
+          memory: 2G
