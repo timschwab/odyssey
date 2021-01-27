@@ -59,3 +59,23 @@ portals:
     location: -265.0,72.0,-131.0:-265.0,72.0,-131.0
     world: coruscant
     destination: p:nexus>coruscant
+  caroot>nexus:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: -46.0,69.0,150.0:-46.0,69.0,150.0
+    world: caroot
+    destination: p:nexus>caroot:n
+  nexus>caroot:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: 8.0,56.0,28.0:8.0,56.0,28.0
+    world: nexus
+    destination: p:caroot>nexus

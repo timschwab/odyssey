@@ -8,6 +8,9 @@ groups:
     - coruscant
     - coruscant_nether
     - coruscant_the_end
+    - caroot
+    - caroot_nether
+    - caroot_the_end
     shares:
     - all
   nexus:
