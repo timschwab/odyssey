@@ -21,7 +21,7 @@ services:
           cpus: 2
           memory: 6G
         reservations:
-          memory: 3G
+          memory: 4G
 
   dev:
     build: .
