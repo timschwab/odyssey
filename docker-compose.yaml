@@ -6,7 +6,7 @@ services:
     container_name: odyssey-prod
     environment:
       - JAVA_MEMORY_MAX=6G
-      - JAVA_MEMORY_MIN=3G
+      - JAVA_MEMORY_MIN=2G
     ports:
       - "25565:25565"
     volumes:
@@ -15,20 +15,13 @@ services:
       - "/odyssey/prod/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
       - "/odyssey/prod/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"
       - "/odyssey/prod/plugin-configs/mv-inventories:/odyssey/plugins/Multiverse-Inventories"
-    deploy:
-      resources:
-        limits:
-          cpus: 2
-          memory: 6G
-        reservations:
-          memory: 3G
 
   dev:
     build: .
     container_name: odyssey-dev
     environment:
       - JAVA_MEMORY_MAX=2G
-      - JAVA_MEMORY_MIN=2G
+      - JAVA_MEMORY_MIN=1G
     ports:
       - "25566:25565"
     volumes:
@@ -37,10 +30,3 @@ services:
       - "/odyssey/dev/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
       - "/odyssey/dev/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"
       - "/odyssey/dev/plugin-configs/mv-inventories:/odyssey/plugins/Multiverse-Inventories"
-    deploy:
-      resources:
-        limits:
-          cpus: 1
-          memory: 2G
-        reservations:
-          memory: 2G
