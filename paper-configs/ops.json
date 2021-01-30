@@ -4,5 +4,11 @@
     "name": "pyzaist",
     "level": 4,
     "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "cc510295-a69e-408a-9252-75ba6f02bd9a",
+    "name": "Lenier",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
