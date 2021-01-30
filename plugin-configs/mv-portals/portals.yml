@@ -79,3 +79,23 @@ portals:
     location: 8.0,56.0,28.0:8.0,56.0,28.0
     world: nexus
     destination: p:caroot>nexus
+  nexus>arena:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: -40.0,56.0,28.0:-40.0,56.0,28.0
+    world: nexus
+    destination: p:arena>nexus:e
+  arena>nexus:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: pyzaist
+    location: 32.0,62.0,-1046.0:32.0,62.0,-1046.0
+    world: arena
+    destination: p:nexus>arena:n

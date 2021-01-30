@@ -30,3 +30,8 @@ groups:
     - asgard
     shares:
     - all
+  arena:
+    worlds:
+    - arena
+    shares:
+    - all
