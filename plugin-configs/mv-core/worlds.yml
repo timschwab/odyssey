@@ -143,7 +143,7 @@ worlds:
   arena:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: 'arena'
     color: WHITE
     style: NORMAL
     pvp: 'true'
@@ -170,8 +170,8 @@ worlds:
     autoHeal: 'true'
     adjustSpawn: 'true'
     portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
+    gameMode: ADVENTURE
+    keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
       x: 55.0
