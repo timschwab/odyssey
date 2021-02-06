@@ -24,14 +24,14 @@ settings:
   max-joins-per-tick: 3
   track-plugin-scoreboards: false
   suggest-player-names-when-null-tab-completions: true
-  console-has-all-permissions: false
+  console-has-all-permissions: true
   bungee-online-mode: true
   use-alternative-luck-formula: false
   enable-player-collisions: true
   unsupported-settings:
-    allow-permanent-block-break-exploits: false
+    allow-permanent-block-break-exploits: true
     allow-piston-duplication: true
-    allow-headless-pistons: false
+    allow-headless-pistons: true
     allow-permanent-block-break-exploits-readme: This setting controls if players
       should be able to break bedrock, end portals and other intended to be permanent
       blocks.
@@ -67,7 +67,7 @@ timings:
   - settings.velocity-support.secret
   history-interval: 300
   history-length: 3600
-  server-name: Unknown Server
+  server-name: Odyssey
 messages:
   no-permission: '&cI''m sorry, but you do not have permission to perform this command.
     Please contact the server administrators if you believe that this is in error.'
@@ -146,7 +146,7 @@ world-settings:
       disable-mob-spawner-spawn-egg-transformation: false
       disable-pillager-patrols: false
       fix-curing-zombie-villager-discount-exploit: true
-      scan-for-legacy-ender-dragon: true
+      scan-for-legacy-ender-dragon: false
       pillager-patrols:
         spawn-chance: 0.2
         spawn-delay:
