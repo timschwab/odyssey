@@ -37,7 +37,7 @@ settings:
   moved-too-quickly-multiplier: 10.0
   log-villager-deaths: true
   timeout-time: 60
-  restart-on-crash: true
+  restart-on-crash: false
   restart-script: ./start.sh
   netty-threads: 4
   debug: false

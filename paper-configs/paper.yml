@@ -24,14 +24,14 @@ settings:
   max-joins-per-tick: 3
   track-plugin-scoreboards: false
   suggest-player-names-when-null-tab-completions: true
-  console-has-all-permissions: false
+  console-has-all-permissions: true
   bungee-online-mode: true
   use-alternative-luck-formula: false
   enable-player-collisions: true
   unsupported-settings:
-    allow-permanent-block-break-exploits: false
+    allow-permanent-block-break-exploits: true
     allow-piston-duplication: true
-    allow-headless-pistons: false
+    allow-headless-pistons: true
     allow-permanent-block-break-exploits-readme: This setting controls if players
       should be able to break bedrock, end portals and other intended to be permanent
       blocks.
@@ -67,7 +67,7 @@ timings:
   - settings.velocity-support.secret
   history-interval: 300
   history-length: 3600
-  server-name: Unknown Server
+  server-name: Odyssey
 messages:
   no-permission: '&cI''m sorry, but you do not have permission to perform this command.
     Please contact the server administrators if you believe that this is in error.'
@@ -80,11 +80,11 @@ world-settings:
   default:
     portal-search-vanilla-dimension-scaling: true
     water-over-lava-flow-speed: 5
-    use-faster-eigencraft-redstone: false
+    use-faster-eigencraft-redstone: true
     zombies-target-turtle-eggs: true
     zombie-villager-infection-chance: -1.0
     mob-spawner-tick-rate: 1
-    container-update-tick-rate: 1
+    container-update-tick-rate: 2
     prevent-tnt-from-moving-in-water: false
     seed-based-feature-search: true
     nether-ceiling-void-damage-height: 0
@@ -112,7 +112,7 @@ world-settings:
     phantoms-do-not-spawn-on-creative-players: true
     phantoms-only-attack-insomniacs: true
     entities-target-with-follow-range: false
-    armor-stands-tick: true
+    armor-stands-tick: false
     non-player-arrow-despawn-rate: -1
     creative-arrow-despawn-rate: -1
     all-chunks-are-slime-chunks: false
@@ -126,16 +126,16 @@ world-settings:
     fixed-chunk-inhabited-time: -1
     use-vanilla-world-scoreboard-name-coloring: false
     should-remove-dragon: false
-    max-auto-save-chunks-per-tick: 24
+    max-auto-save-chunks-per-tick: 16
     disable-teleportation-suffocation-check: false
-    optimize-explosions: false
+    optimize-explosions: true
     baby-zombie-movement-modifier: 0.5
     count-all-mobs-for-spawning: false
     per-player-mob-spawns: false
     delay-chunk-unloads-by: 10s
     light-queue-size: 20
     game-mechanics:
-      disable-chest-cat-detection: false
+      disable-chest-cat-detection: true
       disable-end-credits: false
       disable-unloaded-chunk-enderpearl-exploit: true
       disable-relative-projectile-velocity: false
@@ -146,7 +146,7 @@ world-settings:
       disable-mob-spawner-spawn-egg-transformation: false
       disable-pillager-patrols: false
       fix-curing-zombie-villager-discount-exploit: true
-      scan-for-legacy-ender-dragon: true
+      scan-for-legacy-ender-dragon: false
       pillager-patrols:
         spawn-chance: 0.2
         spawn-delay:
@@ -191,7 +191,7 @@ world-settings:
       skeletons: false
     hopper:
       cooldown-when-full: true
-      disable-move-event: false
+      disable-move-event: true
     lightning-strike-distance-limit:
       sound: -1
       impact-sound: -1
