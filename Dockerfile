@@ -53,6 +53,7 @@ RUN chmod +x run.sh
 EXPOSE 80 433 25565
 
 # Run as me for convenience
+RUN useradd pyzaist
 USER pyzaist
 
 # Initial command
