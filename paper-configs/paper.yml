@@ -78,6 +78,11 @@ messages:
     flying-vehicle: Flying is not enabled on this server
 world-settings:
   default:
+    ender-dragons-death-always-places-dragon-egg: false
+    update-pathfinding-on-block-update: true
+    only-players-collide: false
+    allow-vehicle-collisions: true
+    max-leash-distance: 10.0
     portal-search-vanilla-dimension-scaling: true
     water-over-lava-flow-speed: 5
     use-faster-eigencraft-redstone: true
