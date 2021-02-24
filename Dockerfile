@@ -9,7 +9,8 @@ WORKDIR /odyssey
 # Paper
 ARG PAPER_VERSION=1.16.5
 ARG PAPER_BUILD=483
-RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar -O paper.jar
+ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
+RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
 # Make plugins folder
 RUN mkdir plugins
@@ -50,6 +51,9 @@ RUN chmod +x run.sh
 
 # Open ports
 EXPOSE 80 433 25565
+
+# Run as me for convenience
+USER pyzaist
 
 # Initial command
 CMD ["./run.sh"]
