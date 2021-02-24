@@ -52,5 +52,8 @@ RUN chmod +x run.sh
 # Open ports
 EXPOSE 80 433 25565
 
+# Run as me for convenience
+USER pyzaist
+
 # Initial command
 CMD ["./run.sh"]
