@@ -53,7 +53,7 @@ COPY run.sh ./
 RUN chmod +x run.sh
 
 # Open ports
-EXPOSE 80 433 25565
+EXPOSE 80 25565
 
 # Run as me for convenience
 RUN useradd pyzaist && chown -R pyzaist .
