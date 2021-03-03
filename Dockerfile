@@ -33,7 +33,7 @@ RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
 # Dynmap
 ARG DYNMAP_URL=https://dev.bukkit.org/projects/dynmap/files/3197686/download
-RUN  wget {DYNMAP_URL} -O plugins/dynmap.jar
+RUN  wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
 
