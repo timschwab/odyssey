@@ -24,8 +24,10 @@ services:
       - JAVA_MEMORY_MIN=1G
     ports:
       - "25566:25565"
+      - "80:8123"
     volumes:
       - "/odyssey/dev/worlds:/odyssey/worlds"
+      - "/odyssey/dev/dynmap:/odyssey/plugins/dynmap"
       - "/odyssey/dev/paper-configs:/odyssey/configs"
       - "/odyssey/dev/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
       - "/odyssey/dev/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"

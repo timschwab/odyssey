@@ -31,8 +31,11 @@ RUN wget ${MV_NETHER_PORTALS_URL} -O plugins/Multiverse-NetherPortals.jar
 ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3074/607/Multiverse-Inventories-4.2.1.jar
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
-# World Edit
 # Dynmap
+ARG DYNMAP_URL=https://dev.bukkit.org/projects/dynmap/files/3197686/download
+RUN  wget {DYNMAP_URL} -O plugins/dynmap.jar
+
+# World Edit
 
 # Set up symlinks for the paper config files. Lame but necessary.
 RUN ln -s configs/server.properties server.properties && \
