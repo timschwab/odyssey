@@ -9,6 +9,7 @@ services:
       - JAVA_MEMORY_MIN=2G
     ports:
       - "25565:25565"
+      - "80:8123"
     volumes:
       - "/odyssey/prod/worlds:/odyssey/worlds"
       - "/odyssey/prod/paper-configs:/odyssey/configs"
@@ -24,7 +25,6 @@ services:
       - JAVA_MEMORY_MIN=1G
     ports:
       - "25566:25565"
-      - "80:8123"
     volumes:
       - "/odyssey/dev/worlds:/odyssey/worlds"
       - "/odyssey/dev/dynmap:/odyssey/plugins/dynmap"
