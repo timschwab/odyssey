@@ -12,6 +12,7 @@ services:
       - "80:8123"
     volumes:
       - "/odyssey/prod/worlds:/odyssey/worlds"
+      - "/odyssey/prod/dynmap:/odyssey/plugins/dynmap"
       - "/odyssey/prod/paper-configs:/odyssey/configs"
       - "/odyssey/prod/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"
       - "/odyssey/prod/plugin-configs/mv-portals:/odyssey/plugins/Multiverse-Portals"
