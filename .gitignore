@@ -5,11 +5,14 @@
 worlds/*
 !worlds/.gitkeep
 
-# Same with dynmap
+# Keep dynmap's configs, but ignore the rest.
 dynmap/*
-!dynmap/.gitkeep
+!dynmap/configuration.txt
+!dynmap/markers.yml
+!dynmap/perspectives.txt
+!dynmap/worlds.txt
 
-# Keep the inventories config, but ignore the data. Sadly you can't move the data somewhere else, AFAIK.
+# Same as dynmap
 plugin-configs/mv-inventories/*
 !plugin-configs/mv-inventories/config.yml
 !plugin-configs/mv-inventories/groups.yml
