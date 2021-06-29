@@ -10,6 +10,7 @@
 # Website: https://papermc.io/ 
 # Docs: https://paper.readthedocs.org/ 
 
+use-display-name-in-quit-message: false
 verbose: false
 config-version: 20
 settings:
@@ -57,6 +58,19 @@ settings:
   book-size:
     page-max: 2560
     total-multiplier: 0.98
+  console:
+    enable-brigadier-highlighting: true
+    enable-brigadier-completions: true
+  loggers:
+    deobfuscate-stacktraces: true
+  item-validation:
+    display-name: 8192
+    loc-name: 8192
+    lore-line: 8192
+    book:
+      title: 8192
+      author: 8192
+      page: 16384
 timings:
   enabled: true
   verbose: true
@@ -78,6 +92,11 @@ messages:
     flying-vehicle: Flying is not enabled on this server
 world-settings:
   default:
+    allow-using-signs-inside-spawn-protection: false
+    fix-wither-targeting-bug: false
+    map-item-frame-cursor-limit: 128
+    seed-based-feature-search-loads-chunks: true
+    fix-items-merging-through-walls: false
     ender-dragons-death-always-places-dragon-egg: false
     update-pathfinding-on-block-update: true
     only-players-collide: false
@@ -161,6 +180,7 @@ world-settings:
           per-player: false
           day: 5
     anti-xray:
+      max-block-height: 64
       enabled: false
       engine-mode: 1
       max-chunk-section-index: 3
@@ -244,3 +264,11 @@ world-settings:
       snowball: -1
       ender_pearl: -1
       arrow: -1
+    spawn-limits:
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
+      ambient: -1
+    unsupported-settings:
+      fix-invulnerable-end-crystal-exploit: true
