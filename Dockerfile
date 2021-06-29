@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:11
+FROM openjdk:16
 
 # Set working directory
 WORKDIR /odyssey
@@ -7,16 +7,16 @@ WORKDIR /odyssey
 ##### DOWNLOADS #####
 
 # Paper
-ARG PAPER_VERSION=1.16.5
-ARG PAPER_BUILD=483
+ARG PAPER_VERSION=1.17
+ARG PAPER_BUILD=60
 ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
 RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
 # Make plugins folder
 RUN mkdir plugins
 
-# Multiverse Core 4.2.2
-ARG MV_CORE_URL=https://media.forgecdn.net/files/3074/594/Multiverse-Core-4.2.2.jar
+# Multiverse Core 4.3.0
+ARG MV_CORE_URL=https://media.forgecdn.net/files/3362/854/Multiverse-Core-4.3.0.jar
 RUN wget ${MV_CORE_URL} -O plugins/Multiverse-Core.jar
 
 # Multiverse Portals 4.2.1
@@ -27,12 +27,12 @@ RUN wget ${MV_PORTALS_URL} -O plugins/Multiverse-Portals.jar
 ARG MV_NETHER_PORTALS_URL=https://media.forgecdn.net/files/3074/616/Multiverse-NetherPortals-4.2.1.jar
 RUN wget ${MV_NETHER_PORTALS_URL} -O plugins/Multiverse-NetherPortals.jar
 
-# Multiverse Inventories 4.2.1
-ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3074/607/Multiverse-Inventories-4.2.1.jar
+# Multiverse Inventories 4.2.2
+ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inventories-4.2.2.jar
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
 # Dynmap
-ARG DYNMAP_URL=https://media.forgecdn.net/files/3197/686/Dynmap-3.1-beta7-spigot.jar
+ARG DYNMAP_URL=https://media.forgecdn.net/files/3242/277/Dynmap-3.1-spigot.jar
 RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
