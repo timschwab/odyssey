@@ -1,11 +1,5 @@
 [
   {
-    "uuid": "e89cbcae-9584-456e-91db-4314f2888794",
-    "name": "Elwyne",
-    "level": 4,
-    "bypassesPlayerLimit": false
-  },
-  {
     "uuid": "38d57a0f-5baa-4f73-950e-778722fde44a",
     "name": "pyzaist",
     "level": 4,
@@ -14,13 +8,13 @@
   {
     "uuid": "cc510295-a69e-408a-9252-75ba6f02bd9a",
     "name": "Lenier",
-    "level": 4,
+    "level": 2,
     "bypassesPlayerLimit": false
   },
   {
     "uuid": "459d4d15-fbb2-4ebe-80da-a0047c3e8df6",
     "name": "CrystylGahe",
-    "level": 4,
+    "level": 2,
     "bypassesPlayerLimit": false
   }
 ]
