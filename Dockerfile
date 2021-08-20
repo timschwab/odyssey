@@ -32,8 +32,8 @@ ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inve
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
 # Dynmap
-#ARG DYNMAP_URL=https://media.forgecdn.net/files/3242/277/Dynmap-3.1-spigot.jar
-#RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
+ARG DYNMAP_URL=https://media.forgecdn.net/files/3369/608/Dynmap-3.2-beta-2-spigot.jar
+RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
 
