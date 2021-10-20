@@ -36,6 +36,7 @@ ARG DYNMAP_URL=https://media.forgecdn.net/files/3369/608/Dynmap-3.2-beta-2-spigo
 RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
+# TODO
 
 # Set up symlinks for the paper config files. Lame but necessary.
 RUN ln -s configs/server.properties server.properties && \
@@ -52,11 +53,11 @@ RUN ln -s configs/server.properties server.properties && \
 COPY run.sh ./
 RUN chmod +x run.sh
 
+# Create named pipe for input into the server
+RUN mkfifo mc.pipe
+
 # Open ports
 EXPOSE 80 25565
-
-# Install tmux
-RUN apt-get update && apt-get install -y tmux
 
 # Run as me for convenience
 RUN useradd pyzaist && chown -R pyzaist .
