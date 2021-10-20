@@ -12,8 +12,11 @@
 
 use-display-name-in-quit-message: false
 verbose: false
-config-version: 21
+config-version: 23
 settings:
+  lag-compensate-block-breaking: true
+  send-full-pos-for-hard-colliding-entities: true
+  log-player-ip-addresses: true
   fix-entity-position-desync: true
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
@@ -72,6 +75,26 @@ settings:
       author: 8192
       page: 16384
   use-display-name-in-quit-message: false
+  chunk-loading:
+    min-load-radius: 2
+    max-concurrent-sends: 2
+    autoconfig-send-distance: true
+    target-player-chunk-send-rate: 100.0
+    global-max-chunk-send-rate: -1.0
+    enable-frustum-priority: false
+    global-max-chunk-load-rate: -1.0
+    player-max-concurrent-loads: 4.0
+    global-max-concurrent-loads: 500.0
+  packet-limiter:
+    kick-message: '&cSent too many packets'
+    limits:
+      all:
+        interval: 7.0
+        max-packet-rate: 500.0
+      PacketPlayInAutoRecipe:
+        interval: 4.0
+        max-packet-rate: 5.0
+        action: DROP
 timings:
   url: https://timings.aikar.co/
   enabled: true
@@ -94,6 +117,7 @@ messages:
     flying-vehicle: Flying is not enabled on this server
 world-settings:
   default:
+    split-overstacked-loot: true
     piglins-guard-chests: true
     map-item-frame-cursor-update-interval: 10
     allow-player-cramming-damage: false
@@ -161,7 +185,7 @@ world-settings:
     optimize-explosions: true
     baby-zombie-movement-modifier: 0.5
     count-all-mobs-for-spawning: false
-    per-player-mob-spawns: false
+    per-player-mob-spawns: true
     delay-chunk-unloads-by: 10s
     light-queue-size: 20
     game-mechanics:
@@ -293,3 +317,5 @@ world-settings:
       behavior:
         villager:
           validatenearbypoi: -1
+    feature-seeds:
+      generate-random-seeds-for-all: false
