@@ -55,6 +55,9 @@ RUN chmod +x run.sh
 # Open ports
 EXPOSE 80 25565
 
+# Install tmux
+RUN apt-get update && apt-get install -y tmux
+
 # Run as me for convenience
 RUN useradd pyzaist && chown -R pyzaist .
 USER pyzaist
