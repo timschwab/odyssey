@@ -49,18 +49,24 @@ RUN ln -s configs/server.properties server.properties && \
 	ln -s configs/spigot.hml spigot.hml && \
 	ln -s configs/paper.yml paper.yml
 
-# Copy in startup script
-COPY run.sh ./
-RUN chmod +x run.sh
-
 # Create named pipe for input into the server
 RUN mkfifo mc.pipe
+
+# Copy in startup script and cron script
+COPY run.sh ./
+COPY cron-script.sh ./
+RUN chmod +x run.sh && chmod +x cron-script.sh
+
+# Install cron then set up crontab 
+RUN apt-get update && apt-get --yes install cron
+COPY crontab /etc/cron.d/odyssey
+RUN chmod 0644 /etc/cron.d/odyssey && crontab /etc/cron.d/odyssey
 
 # Open ports
 EXPOSE 80 25565
 
 # Run as me for convenience
-RUN useradd pyzaist && chown -R pyzaist .
+RUN useradd pyzaist && chown -R pyzaist:pyzaist .
 USER pyzaist
 
 # Initial command
