@@ -29,6 +29,7 @@ services:
       - "8080:8123"
     volumes:
       - "/odyssey/dev/worlds:/odyssey/worlds"
+      - "/odyssey/dev/backups:/odyssey/backups"
       - "/odyssey/dev/dynmap:/odyssey/plugins/dynmap"
       - "/odyssey/dev/paper-configs:/odyssey/configs"
       - "/odyssey/dev/plugin-configs/mv-core:/odyssey/plugins/Multiverse-Core"

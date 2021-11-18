@@ -52,21 +52,26 @@ RUN ln -s configs/server.properties server.properties && \
 # Create named pipe for input into the server
 RUN mkfifo mc.pipe
 
+# Install cron then set up crontab
+RUN apt-get update && apt-get --yes install cron
+COPY crontab /etc/crontab
+
 # Copy in startup script and cron script
 COPY run.sh ./
 COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
-# Install cron then set up crontab 
-RUN apt-get update && apt-get --yes install cron
-COPY crontab /etc/cron.d/odyssey
-RUN chmod 0644 /etc/cron.d/odyssey && crontab /etc/cron.d/odyssey
-
 # Open ports
 EXPOSE 80 25565
 
+# Install sudo
+RUN apt-get install sudo -y
+
 # Run as me for convenience
-RUN useradd pyzaist && chown -R pyzaist:pyzaist .
+RUN useradd pyzaist && \
+	chown -R pyzaist:pyzaist . && \
+	usermod -aG sudo pyzaist && \
+	echo "pyzaist ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER pyzaist
 
 # Initial command
