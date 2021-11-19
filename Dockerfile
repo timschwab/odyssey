@@ -49,9 +49,6 @@ RUN ln -s configs/server.properties server.properties && \
 	ln -s configs/spigot.hml spigot.hml && \
 	ln -s configs/paper.yml paper.yml
 
-# Create named pipe for input into the server
-RUN mkfifo mc.pipe
-
 # Install cron then set up crontab
 RUN apt-get update && apt-get --yes install cron
 COPY crontab /etc/crontab
