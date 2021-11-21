@@ -59,7 +59,7 @@ COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
 # Open ports
-EXPOSE 80 25565
+EXPOSE 8123 25565
 
 # Install sudo
 RUN apt-get install sudo -y
