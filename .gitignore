@@ -1,14 +1,6 @@
 # Annoying Mac file
 .DS_Store
 
-# Keep the worlds folder, but ignore the contents
-worlds/*
-!worlds/.gitkeep
-
-# Same with backups
-backups/*
-!backups/.gitkeep
-
 # Keep dynmap's configs, but ignore the rest.
 dynmap/*
 !dynmap/configuration.txt
