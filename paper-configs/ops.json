@@ -16,5 +16,11 @@
     "name": "CrystylGahe",
     "level": 2,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "e89cbcae-9584-456e-91db-4314f2888794",
+    "name": "Elwyne",
+    "level": 2,
+    "bypassesPlayerLimit": false
   }
 ]
