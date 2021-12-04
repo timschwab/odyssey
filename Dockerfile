@@ -32,7 +32,7 @@ ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inve
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
 # VoidGen 2.1.1. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
-COPY plugin-configs/VoidGen-2.0.jar plugins/VoidGen-2.0.jar
+COPY plugin-configs/VoidGen-2.1.1.jar plugins/VoidGen-2.1.1.jar
 
 # Dynmap
 ARG DYNMAP_URL=https://media.forgecdn.net/files/3369/608/Dynmap-3.2-beta-2-spigot.jar
