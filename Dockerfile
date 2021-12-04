@@ -8,7 +8,7 @@ WORKDIR /odyssey
 
 # Paper
 ARG PAPER_VERSION=1.17.1
-ARG PAPER_BUILD=338
+ARG PAPER_BUILD=391
 ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
 RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
@@ -30,6 +30,9 @@ RUN wget ${MV_NETHER_PORTALS_URL} -O plugins/Multiverse-NetherPortals.jar
 # Multiverse Inventories 4.2.2
 ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inventories-4.2.2.jar
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
+
+# VoidGen 2.1.1. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
+COPY plugin-configs/VoidGen-2.0.jar plugins/VoidGen-2.0.jar
 
 # Dynmap
 ARG DYNMAP_URL=https://media.forgecdn.net/files/3369/608/Dynmap-3.2-beta-2-spigot.jar

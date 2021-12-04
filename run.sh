@@ -5,7 +5,7 @@ sudo service cron start
 
 # Make sure the named pipe (FIFO) exists
 pipeFile=mc.pipe
-if [! -p "$pipeFile"]; then
+if [ ! -p "$pipeFile" ]; then
     mkfifo "$pipeFile"
 fi
 

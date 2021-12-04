@@ -12,7 +12,7 @@
 
 use-display-name-in-quit-message: false
 verbose: false
-config-version: 23
+config-version: 24
 settings:
   lag-compensate-block-breaking: true
   send-full-pos-for-hard-colliding-entities: true
@@ -245,6 +245,7 @@ world-settings:
       zombies: false
       skeletons: false
     hopper:
+      ignore-occluding-blocks: true
       cooldown-when-full: true
       disable-move-event: true
     lightning-strike-distance-limit:
@@ -278,8 +279,27 @@ world-settings:
         min: 20
         max: 40
     despawn-ranges:
-      soft: 32
-      hard: 128
+      monster:
+        soft: 32
+        hard: 128
+      creature:
+        soft: 32
+        hard: 128
+      ambient:
+        soft: 32
+        hard: 128
+      underground_water_creature:
+        soft: 32
+        hard: 128
+      water_creature:
+        soft: 32
+        hard: 128
+      water_ambient:
+        soft: 32
+        hard: 64
+      misc:
+        soft: 32
+        hard: 128
     max-growth-height:
       cactus: 3
       reeds: 3
@@ -297,10 +317,11 @@ world-settings:
       ender_pearl: -1
       arrow: -1
     spawn-limits:
-      monsters: -1
-      animals: -1
-      water-animals: -1
-      water-ambient: -1
+      monster: -1
+      creature: -1
+      underground_water_creature: -1
+      water_creature: -1
+      water_ambient: -1
       ambient: -1
     unsupported-settings:
       fix-invulnerable-end-crystal-exploit: true
