@@ -36,7 +36,7 @@ portals:
     teleportnonplayers: false
     handlerscript: ''
     owner: pyzaist
-    location: 8.0,65.0,16.0:8.0,65.0,16.0
+    location: 0.0,66.0,0.0:0.0,66.0,0.0
     world: asgard
     destination: p:nexus>asgard:n
   nexus>coruscant:

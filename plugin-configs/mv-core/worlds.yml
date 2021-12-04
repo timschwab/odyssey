@@ -378,7 +378,7 @@ worlds:
   asgard:
     ==: MVWorld
     hidden: 'false'
-    alias: asgard
+    alias: ''
     color: DARKGREEN
     style: NORMAL
     pvp: 'true'
@@ -409,17 +409,17 @@ worlds:
     keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 8.0
-      y: 64.0
-      z: 10.0
+      x: 0.5
+      y: 65.0
+      z: -1.5
       pitch: 0.0
-      yaw: 0.0
+      yaw: 180.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '5883651865498565353'
-    generator: 'null'
+    seed: '-6180245023772989484'
+    generator: VoidGen:{mobs=true,structures=true,decoration=true}
     playerLimit: '-1'
     allowFlight: 'true'
   nexus_the_end:
