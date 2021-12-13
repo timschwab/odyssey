@@ -12,7 +12,7 @@ tar -czvf /odyssey/backups/snapshot-$(date -I).tar.gz /odyssey/worlds
 echo "save-on" >> /odyssey/mc.pipe
 
 # Remove snapshot from 30 days ago (testing - 3 days ago)
-old_file=/odyssey/backups/snapshot-$(date -d "-3 days" -I).tar.gz
+old_file=/odyssey/backups/snapshot-$(date -d "-30 days" -I).tar.gz
 if [ -e "$old_file" ]; then
 	rm "$old_file"
 fi
