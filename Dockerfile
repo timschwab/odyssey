@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:16-buster
+FROM openjdk:17-buster
 
 # Set working directory
 WORKDIR /odyssey
