@@ -7,8 +7,8 @@ WORKDIR /odyssey
 ##### DOWNLOADS #####
 
 # Paper
-ARG PAPER_VERSION=1.17.1
-ARG PAPER_BUILD=398
+ARG PAPER_VERSION=1.18.1
+ARG PAPER_BUILD=134
 ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
 RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
