@@ -1,10 +1,10 @@
 # This is the main configuration file for Paper.
 # As you can see, there's tons to configure. Some options may impact gameplay, so use
 # with caution, and make sure you know what each option does before configuring.
-# 
+#
 # If you need help with the configuration or have any questions related to Paper,
 # join us in our Discord or IRC channel.
-# 
+#
 # Discord: https://discord.gg/papermc
 # IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
 # Website: https://papermc.io/ 
@@ -14,6 +14,7 @@ use-display-name-in-quit-message: false
 verbose: false
 config-version: 24
 settings:
+  fix-target-selector-tag-completion: true
   lag-compensate-block-breaking: true
   send-full-pos-for-hard-colliding-entities: true
   log-player-ip-addresses: true
@@ -33,6 +34,7 @@ settings:
   use-alternative-luck-formula: false
   enable-player-collisions: true
   unsupported-settings:
+    perform-username-validation: true
     allow-permanent-block-break-exploits: true
     allow-piston-duplication: true
     allow-headless-pistons: true
@@ -117,6 +119,12 @@ messages:
     flying-vehicle: Flying is not enabled on this server
 world-settings:
   default:
+    anticheat:
+      obfuscation:
+        items:
+          hide-itemmeta: false
+          hide-durability: false
+    monster-spawn-max-light-level: -1
     split-overstacked-loot: true
     piglins-guard-chests: true
     map-item-frame-cursor-update-interval: 10
@@ -279,6 +287,9 @@ world-settings:
         min: 20
         max: 40
     despawn-ranges:
+      axolotls:
+        soft: 32
+        hard: 128
       monster:
         soft: 32
         hard: 128
@@ -317,6 +328,7 @@ world-settings:
       ender_pearl: -1
       arrow: -1
     spawn-limits:
+      axolotls: -1
       monster: -1
       creature: -1
       underground_water_creature: -1
