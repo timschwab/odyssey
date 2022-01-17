@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Entering script..."
+
 # Start up cron
 sudo service cron start
 
@@ -13,15 +15,29 @@ fi
 JAVA_MEMORY_MIN=${JAVA_MEMORY_MIN:-1G}
 JAVA_MEMORY_MAX=${JAVA_MEMORY_MAX:-4G}
 
-# Capture all signals and pass them to java and tail
-pass_trap() {
-	pkill "-$sig" java
-	pkill "-$sig" tail
-}
+# Capture TERM signals and pass them to java and tail
+receive_trap () {
+	echo "Received TERM signal"
 
-for sig in {1..64} ; do
-	trap "pass_trap $sig" $sig
-done
+	java_pid=$(pgrep java)
+	tail_pid=$(pgrep tail)
+
+	echo "Killing java"
+	kill $java_pid
+
+	echo "Killing tail"
+	kill $tail_pid
+
+	wait $java_pid
+	echo "java killed"
+
+	wait $tail_pid
+	echo "tail killed"
+}
+trap receive_trap TERM
 
 # Start up Minecraft, listening to the named pipe
-tail -f "$pipeFile" | java -Xms$JAVA_MEMORY_MIN -Xmx$JAVA_MEMORY_MAX -jar -Dcom.mojang.eula.agree=true paper.jar
+tail -f "$pipeFile" | java -Xms$JAVA_MEMORY_MIN -Xmx$JAVA_MEMORY_MAX -jar -Dcom.mojang.eula.agree=true paper.jar &
+wait
+
+echo "Exiting script..."
