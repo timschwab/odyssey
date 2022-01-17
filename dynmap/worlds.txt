@@ -25,9 +25,13 @@ worlds:
 
   - name: asgard
     title: "Asgard"
+  - name: asgard_nether
+    title: "Asgard Nether"
 
   - name: rose
     title: "Rose"
 
   - name: sandbox
     title: "Sandbox"
+  - name: sandbox_nether
+    title: "Sandbox Nether"

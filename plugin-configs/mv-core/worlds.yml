@@ -97,7 +97,7 @@ worlds:
     ==: MVWorld
     hidden: 'false'
     alias: sandbox_nether
-    color: WHITE
+    color: BLACK
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
@@ -613,14 +613,14 @@ worlds:
   asgard_nether:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
-    color: WHITE
+    alias: asgard_nether
+    color: DARKGRAY
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: HARD
     spawning:
       ==: MVSpawnSettings
       animals:

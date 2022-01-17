@@ -26,6 +26,12 @@ RUN ln -s configs/server.properties server.properties && \
 # Open ports
 EXPOSE 8123 25565
 
+# Create my user
+RUN useradd pyzaist && \
+	chown -R pyzaist:pyzaist . && \
+	usermod -aG sudo pyzaist && \
+	echo "pyzaist ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
 ##### DOWNLOADS #####
 
 # Paper
@@ -50,15 +56,15 @@ RUN wget ${MV_NETHER_PORTALS_URL} -O plugins/Multiverse-NetherPortals.jar
 ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inventories-4.2.2.jar
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
-# VoidGen 2.1.1. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
-COPY plugin-configs/VoidGen-2.1.3.jar plugins/VoidGen.jar
-
 # Dynmap
 ARG DYNMAP_URL=https://media.forgecdn.net/files/3581/197/Dynmap-3.3-beta-4-spigot.jar
 RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
 # TODO
+
+# VoidGen 2.2. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
+COPY plugin-configs/VoidGen-2.2.jar plugins/VoidGen.jar
 
 ##### FILES/FINISHING #####
 
@@ -71,10 +77,6 @@ COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
 # Run as me for convenience
-RUN useradd pyzaist && \
-	chown -R pyzaist:pyzaist . && \
-	usermod -aG sudo pyzaist && \
-	echo "pyzaist ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER pyzaist
 
 # Initial command
