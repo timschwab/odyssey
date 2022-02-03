@@ -33,7 +33,7 @@ components:
   - class: org.dynmap.InternalClientUpdateComponent
     sendhealth: true
     sendposition: true
-    allowwebchat: true
+    allowwebchat: false
     webchat-interval: 5
     hidewebchatip: false
     trustclientname: false
@@ -41,13 +41,13 @@ components:
     # (optional) if true, color codes in player display names are used
     use-name-colors: false
     # (optional) if true, player login IDs will be used for web chat when their IPs match
-    use-player-login-ip: true
+    use-player-login-ip: false
     # (optional) if use-player-login-ip is true, setting this to true will cause chat messages not matching a known player IP to be ignored
     require-player-login-ip: false
     # (optional) block player login IDs that are banned from chatting
     block-banned-player-chat: true
     # Require login for web-to-server chat (requires login-enabled: true)
-    webchat-requires-login: true
+    webchat-requires-login: false
     # If set to true, users must have dynmap.webchat permission in order to chat
     webchat-permissions: false
     # Limit length of single chat messages
@@ -331,9 +331,9 @@ disable-webserver: false
 allow-symlinks: true
 
 # Enable login support
-login-enabled: true
+login-enabled: false
 # Require login to access website (requires login-enabled: true)
-login-required: true
+login-required: false
 
 # Period between tile renders for fullrender, in seconds (non-zero to pace fullrenders, lessen CPU load)
 timesliceinterval: 0.0
