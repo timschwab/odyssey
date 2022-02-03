@@ -1,16 +1,6 @@
 # All paths in this configuration file are relative to Dynmap's data-folder: minecraft_server/plugins/dynmap/
 
 # All map templates are defined in the templates directory
-# To use the HDMap very-low-res (2 ppb) map templates as world defaults, set value to vlowres
-#   The definitions of these templates are in normal-vlowres.txt, nether-vlowres.txt, and the_end-vlowres.txt
-# To use the HDMap low-res (4 ppb) map templates as world defaults, set value to lowres
-#   The definitions of these templates are in normal-lowres.txt, nether-lowres.txt, and the_end-lowres.txt
-# To use the HDMap hi-res (16 ppb) map templates (these can take a VERY long time for initial fullrender), set value to hires
-#   The definitions of these templates are in normal-hires.txt, nether-hires.txt, and the_end-hires.txt
-# To use the HDMap low-res (4 ppb) map templates, with support for boosting resolution selectively to hi-res (16 ppb), set value to low_boost_hi
-#   The definitions of these templates are in normal-low_boost_hi.txt, nether-low_boost_hi.txt, and the_end-low_boost_hi.txt
-# To use the HDMap hi-res (16 ppb) map templates, with support for boosting resolution selectively to vhi-res (32 ppb), set value to hi_boost_vhi
-#   The definitions of these templates are in normal-hi_boost_vhi.txt, nether-hi_boost_vhi.txt, and the_end-hi_boost_vhi.txt
 # To use the HDMap hi-res (16 ppb) map templates, with support for boosting resolution selectively to xhi-res (64 ppb), set value to hi_boost_xhi
 #   The definitions of these templates are in normal-hi_boost_xhi.txt, nether-hi_boost_xhi.txt, and the_end-hi_boost_xhi.txt
 deftemplatesuffix: hires
@@ -57,7 +47,7 @@ components:
     # (optional) block player login IDs that are banned from chatting
     block-banned-player-chat: true
     # Require login for web-to-server chat (requires login-enabled: true)
-    webchat-requires-login: false
+    webchat-requires-login: true
     # If set to true, users must have dynmap.webchat permission in order to chat
     webchat-permissions: false
     # Limit length of single chat messages
@@ -310,7 +300,7 @@ render-triggers:
   #- blockphysics
   - structuregrow
   - blockgrow
-  #- blockredstone
+  - blockredstone
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
 #webpage-title: "My Awesome Server Map"
@@ -341,9 +331,9 @@ disable-webserver: false
 allow-symlinks: true
 
 # Enable login support
-login-enabled: false
+login-enabled: true
 # Require login to access website (requires login-enabled: true)
-login-required: false
+login-required: true
 
 # Period between tile renders for fullrender, in seconds (non-zero to pace fullrenders, lessen CPU load)
 timesliceinterval: 0.0
