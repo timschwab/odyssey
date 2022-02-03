@@ -6,6 +6,10 @@
 # No support will be given for those who manually edit these groups.
 # To ADD, DELETE, and EDIT groups use the command /mvinv group.
 # No support will be given for those who manually edit these groups.
+# To ADD, DELETE, and EDIT groups use the command /mvinv group.
+# No support will be given for those who manually edit these groups.
+# To ADD, DELETE, and EDIT groups use the command /mvinv group.
+# No support will be given for those who manually edit these groups.
 groups:
   survival:
     worlds:
@@ -32,6 +36,7 @@ groups:
   asgard:
     worlds:
     - asgard
+    - asgard_nether
     shares:
     - all
   arena:
