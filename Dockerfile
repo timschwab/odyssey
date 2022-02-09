@@ -8,6 +8,9 @@ WORKDIR /odyssey
 
 # Install software
 RUN apt-get update && apt-get --yes install cron sudo
+RUN wget "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -O "awscliv2.zip" && \
+	unzip awscliv2.zip && \
+	./aws/install
 
 # Make plugins folder
 RUN mkdir plugins
@@ -28,7 +31,7 @@ EXPOSE 8123 25565
 
 # Create the user
 ARG username=root
-RUN useradd ${username} && \
+RUN useradd -m ${username} && \
 	chown -R ${username}:${username} . && \
 	usermod -aG sudo ${username} && \
 	echo "${username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
