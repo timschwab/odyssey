@@ -26,11 +26,12 @@ RUN ln -s configs/server.properties server.properties && \
 # Open ports
 EXPOSE 8123 25565
 
-# Create my user
-RUN useradd pyzaist && \
-	chown -R pyzaist:pyzaist . && \
-	usermod -aG sudo pyzaist && \
-	echo "pyzaist ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+# Create the user
+ARG username=root
+RUN useradd ${username} && \
+	chown -R ${username}:${username} . && \
+	usermod -aG sudo ${username} && \
+	echo "${username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 ##### DOWNLOADS #####
 
@@ -77,7 +78,7 @@ COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
 # Run as me for convenience
-USER pyzaist
+USER ${username}
 
 # Initial command
 CMD ["./run.sh"]
