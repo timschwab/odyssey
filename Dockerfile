@@ -9,8 +9,9 @@ WORKDIR /odyssey
 # Install software
 RUN apt-get update && apt-get --yes install cron sudo
 RUN wget "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -O "awscliv2.zip" && \
-	unzip awscliv2.zip && \
-	./aws/install
+	unzip awscliv2.zip -d /tmp && \
+	/tmp/aws/install && \
+	rm -rf /tmp/aws
 
 # Make plugins folder
 RUN mkdir plugins
