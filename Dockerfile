@@ -31,7 +31,7 @@ RUN ln -s configs/server.properties server.properties && \
 EXPOSE 8123 25565
 
 # Create the user
-ARG username=root
+ARG username=worker
 RUN useradd -m ${username} && \
 	chown -R ${username}:${username} . && \
 	usermod -aG sudo ${username} && \
