@@ -34,7 +34,7 @@ EXPOSE 8123 25565
 
 # Paper
 ARG PAPER_VERSION=1.18.1
-ARG PAPER_BUILD=152
+ARG PAPER_BUILD=215
 ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
 RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
@@ -55,14 +55,14 @@ ARG MV_INVENTORIES_URL=https://media.forgecdn.net/files/3222/929/Multiverse-Inve
 RUN wget ${MV_INVENTORIES_URL} -O plugins/Multiverse-Inventories.jar
 
 # Dynmap
-ARG DYNMAP_URL=https://media.forgecdn.net/files/3581/197/Dynmap-3.3-beta-4-spigot.jar
+ARG DYNMAP_URL=https://media.forgecdn.net/files/3637/280/Dynmap-3.3.2-spigot.jar
 RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 
 # World Edit
 # TODO
 
 # VoidGen 2.2. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
-COPY plugin-configs/VoidGen-2.2.jar plugins/VoidGen.jar
+COPY plugin-configs/VoidGen-2.2.1.jar plugins/VoidGen.jar
 
 ##### FILES/FINISHING #####
 
