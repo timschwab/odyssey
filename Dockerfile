@@ -81,7 +81,11 @@ COPY run.sh ./
 COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
-# Run as me for convenience
+# Record S3 bucket name for the cron-script
+ARG S3_BUCKET=odyssey-minecraft-prod
+RUN echo ${S3_BUCKET} > s3_bucket
+
+# Run as the user
 USER ${username}
 
 # Initial command
