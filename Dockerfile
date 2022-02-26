@@ -30,13 +30,6 @@ RUN ln -s configs/server.properties server.properties && \
 # Open ports
 EXPOSE 8123 25565
 
-# Create the user
-ARG username=worker
-RUN useradd -m ${username} && \
-	chown -R ${username}:${username} . && \
-	usermod -aG sudo ${username} && \
-	echo "${username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-
 ##### DOWNLOADS #####
 
 # Paper
@@ -82,8 +75,15 @@ COPY cron-script.sh ./
 RUN chmod +x run.sh && chmod +x cron-script.sh
 
 # Record S3 bucket name for the cron-script
-ARG S3_BUCKET=odyssey-minecraft-prod
-RUN echo ${S3_BUCKET} > s3_bucket
+ARG s3_bucket=odyssey-minecraft-prod
+RUN echo ${s3_bucket} > s3_bucket
+
+# Create the user
+ARG username=worker
+RUN useradd -m ${username} && \
+	chown -R ${username}:${username} . && \
+	usermod -aG sudo ${username} && \
+	echo "${username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Run as the user
 USER ${username}

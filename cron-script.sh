@@ -3,6 +3,7 @@
 # Flush everything and make sure the filesystem is ready for copying
 echo "save-off" >> /odyssey/mc.pipe
 echo "save-all" >> /odyssey/mc.pipe
+echo "Waiting for Minecraft save..."
 sleep 60
 
 # Do backup
@@ -19,8 +20,8 @@ if [ -e "$old_file" ]; then
 fi
 
 # Send backup to AWS once a week
-aws_bucket="odyssey-minecraft-dev"
-if [[ $(date +%u) -eq 1 ]]
+s3_bucket=$(cat s3_bucket)
+if [[ $(date +%u) -eq 6 ]]
 then
-	aws s3 cp /odyssey/$new_file s3://$aws_bucket/$new_file
+	aws s3 cp /odyssey/$new_file s3://$s3_bucket/$new_file
 fi
