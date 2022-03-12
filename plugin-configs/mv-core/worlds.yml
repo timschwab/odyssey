@@ -7,7 +7,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: coruscant
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -54,7 +54,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: nexus
     allowWeather: 'true'
     difficulty: PEACEFUL
     spawning:
@@ -101,7 +101,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: sandbox
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -148,7 +148,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: sandbox
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -195,7 +195,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: arena
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -242,7 +242,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: nexus
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -336,7 +336,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: coruscant
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -383,7 +383,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: asgard
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -430,7 +430,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '16.0'
-    respawnWorld: ''
+    respawnWorld: nexus
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -524,7 +524,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: rose
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -618,7 +618,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: asgard
     allowWeather: 'true'
     difficulty: HARD
     spawning:
@@ -665,7 +665,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: caroot
     allowWeather: 'true'
     difficulty: HARD
     spawning:
