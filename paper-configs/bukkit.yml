@@ -25,6 +25,7 @@ settings:
   minimum-api: none
   world-container: worlds
 spawn-limits:
+  axolotls: 5
   water-underground-creature: 5
   monsters: 70
   animals: 10
@@ -34,6 +35,7 @@ spawn-limits:
 chunk-gc:
   period-in-ticks: 600
 ticks-per:
+  axolotl-spawns: 1
   water-underground-creature-spawns: 1
   animal-spawns: 400
   monster-spawns: 1
