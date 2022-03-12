@@ -61,7 +61,7 @@ RUN wget ${DYNMAP_URL} -O plugins/dynmap.jar
 # World Edit
 # TODO
 
-# VoidGen 2.2. It is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
+# VoidGen is hosted on spigotmc.org rather than forgecdn.net, and I can't get around Cloudflare there.
 COPY plugin-configs/VoidGen-2.2.1.jar plugins/VoidGen.jar
 
 ##### FILES/FINISHING #####
