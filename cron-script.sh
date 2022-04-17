@@ -20,7 +20,7 @@ if [ -e "$old_file" ]; then
 fi
 
 # Send backup to AWS once a week
-s3_bucket=$(cat s3_bucket)
+s3_bucket=$(cat /odyssey/s3_bucket)
 if [[ $(date +%u) -eq 1 ]]
 then
 	aws s3 cp /odyssey/$new_file s3://$s3_bucket/$new_file
