@@ -69,10 +69,11 @@ COPY plugin-configs/VoidGen-2.2.1.jar plugins/VoidGen.jar
 # Install cron then set up crontab
 COPY crontab /etc/crontab
 
-# Copy in startup script and cron script
+# Copy in startup script and cron scripts
 COPY run.sh ./
+COPY cron-entry.sh ./
 COPY cron-script.sh ./
-RUN chmod +x run.sh && chmod +x cron-script.sh
+RUN chmod +x run.sh && chmod +x cron-entry.sh && chmod +x cron-script.sh
 
 # Record S3 bucket name for the cron-script
 ARG s3_bucket=odyssey-minecraft-prod

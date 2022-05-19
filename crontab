@@ -7,6 +7,6 @@
 # |  |  |  |  |
 # *  *  *  *  * user-name command to be executed
 
-# 8 = 3 am
-0 8 * * * pyzaist /odyssey/cron-script.sh
+# 8:00 AM GMT = 3:00 AM EST. EST = UTC-05.
+0 8 * * * pyzaist /odyssey/cron-entry.sh
 
