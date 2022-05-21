@@ -23,5 +23,5 @@ fi
 s3_bucket=$(cat /odyssey/s3_bucket)
 if [[ $(date +%u) -eq 1 ]]
 then
-	aws s3 cp /odyssey/$new_file s3://$s3_bucket/$new_file
+	/usr/local/bin/aws s3 cp /odyssey/$new_file s3://$s3_bucket/$new_file
 fi
