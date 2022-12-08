@@ -33,8 +33,8 @@ EXPOSE 8123 25565
 ##### DOWNLOADS #####
 
 # Paper
-ARG PAPER_VERSION=1.18.1
-ARG PAPER_BUILD=215
+ARG PAPER_VERSION=1.19.2
+ARG PAPER_BUILD=307
 ARG PAPER_ENDPOINT=${PAPER_VERSION}/builds/${PAPER_BUILD}/downloads/paper-${PAPER_VERSION}-${PAPER_BUILD}.jar
 RUN wget https://papermc.io/api/v2/projects/paper/versions/${PAPER_ENDPOINT} -O paper.jar
 
